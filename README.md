@@ -1,10 +1,26 @@
-# Pi Plugin Eonova
+# Pi Plugin Eonova — PI-Desktop 德古拉主题
 
-Generated from the `panel-basic` template.
+A PI-Desktop theme/plugin based on the classic **Dracula** palette
+(`#282a36` / `#44475a` / `#f8f8f2` / purple `#bd93f9` / pink `#ff79c6` /
+cyan `#8be9fd` / green `#50fa7b` / orange `#ffb86c` / red `#ff5555`).
+
+## Screenshots
+
+| Panel | Settings |
+| --- | --- |
+| ![Panel preview](static/index.png) | ![Settings preview](static/setting.png) |
 
 ## Contributions
 
 - Command `pi-plugin-eonova.open` opening a panel from `renderer/index.html`
+- A PI-Desktop Theme Studio theme (`dracula`) built from the official Dracula
+  palette, mapped onto the host's semantic `--ds-*` tokens per the
+  [UI design-system spec](https://pi-docs.aiuo.net/spec/04-ux/07-ui-design-system):
+  - Surfaces: `bg-primary #282a36`, `bg-secondary / composer #343746`,
+    `bg-tertiary / raised #44475a`, inset & sidebar `#21222c`
+  - Text: `#f8f8f2` primary, `#6272a4` muted (Dracula comment blue)
+  - Accent: purple `#bd93f9` (hover `#d6acff`, soft `#ff79c6`)
+  - Status: success `#50fa7b`, warning `#ffb86c`, error `#ff5555`, info `#8be9fd`
 
 ## Develop
 
