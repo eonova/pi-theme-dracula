@@ -8,7 +8,7 @@ cyan `#8be9fd` / green `#50fa7b` / orange `#ffb86c` / red `#ff5555`).
 
 | Panel | Settings |
 | --- | --- |
-| ![Panel preview](static/index.png) | ![Settings preview](static/setting.png) |
+| ![Panel preview](static/index.jpg) | ![Settings preview](static/setting.jpg) |
 
 ## Contributions
 
