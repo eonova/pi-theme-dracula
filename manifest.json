@@ -1,21 +1,21 @@
 {
   "schemaVersion": 1,
-  "id": "local.pi-plugin-eonova",
-  "name": "Pi Plugin Eonova",
+  "id": "local.pi-theme-dracula",
+  "name": "pi-theme-dracula",
   "version": "0.1.0",
-  "description": "Pi Plugin Eonova — generated from the panel-basic template.",
+  "description": "pi-theme-dracula — PI-Desktop Dracula theme plugin.",
   "main": "main.js",
   "ui": {
     "panel": "renderer/index.html",
-    "title": "Pi Plugin Eonova"
+    "title": "pi-theme-dracula"
   },
   "contributes": {
     "commands": [
       {
-        "id": "pi-plugin-eonova.open",
-        "title": "Pi Plugin Eonova: Open Panel",
+        "id": "pi-theme-dracula.open",
+        "title": "pi-theme-dracula: Open Panel",
         "keywords": [
-          "pi-plugin-eonova"
+          "pi-theme-dracula"
         ]
       }
     ]
@@ -27,7 +27,7 @@
     "piDesktop": ">=0.1.0"
   },
   "activationEvents": [
-    "onCommand:pi-plugin-eonova.open",
+    "onCommand:pi-theme-dracula.open",
     "onStartup"
   ]
 }

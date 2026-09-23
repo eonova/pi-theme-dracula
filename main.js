@@ -1,5 +1,5 @@
 /**
- * Pi Plugin Eonova — PI-Desktop plugin entry.
+ * pi-theme-dracula — PI-Desktop plugin entry.
  *
  * The host injects the global `pi` object. Every call is gated by the
  * permissions declared in manifest.json, so widening what this file does
@@ -8,18 +8,18 @@
 
 async function onLoad() {
   await pi.commands.register({
-    id: "pi-plugin-eonova.open",
-    title: "Pi Plugin Eonova: Open Panel",
-    keywords: ["pi-plugin-eonova"],
+    id: "pi-theme-dracula.open",
+    title: "pi-theme-dracula: Open Panel",
+    keywords: ["pi-theme-dracula"],
     run: async () => {
-      await pi.ui.openPanel({ title: "Pi Plugin Eonova" });
-      await pi.ui.showToast("Hello from Pi Plugin Eonova");
+      await pi.ui.openPanel({ title: "pi-theme-dracula" });
+      await pi.ui.showToast("Hello from pi-theme-dracula");
     },
   });
 }
 
 async function onUnload() {
-  await pi.commands.unregister("pi-plugin-eonova.open");
+  await pi.commands.unregister("pi-theme-dracula.open");
 }
 
 module.exports = { onLoad, onUnload };

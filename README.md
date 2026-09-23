@@ -32,7 +32,7 @@ cyan `#8be9fd` / green `#50fa7b` / orange `#ffb86c` / red `#ff5555`).
 ```bash
 pnpm pi-plugin check .
 pnpm pi-plugin pack .
-# writes dist/local.pi-plugin-eonova-0.1.0.piplug
+# writes dist/local.pi-theme-dracula-0.1.0.piplug
 ```
 
 Install the resulting `.piplug` from the Plugins page to test it the way a
