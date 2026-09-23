@@ -41,7 +41,7 @@ follows the app language.
 ```bash
 pnpm pi-plugin check .
 pnpm pi-plugin pack .
-# writes dist/local.pi-theme-dracula-0.3.0.piplug
+# writes dist/io.github.eonova.theme-dracula-0.4.0.piplug
 ```
 
 ## Source

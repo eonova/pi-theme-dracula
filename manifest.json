@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "id": "local.pi-theme-dracula",
+  "id": "io.github.eonova.theme-dracula",
   "name": "pi-theme-dracula",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "pi-theme-dracula — PI-Desktop Dracula theme.",
   "main": "main.js",
   "contributes": {
