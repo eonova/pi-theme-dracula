@@ -2,53 +2,35 @@
   "schemaVersion": 1,
   "id": "local.pi-theme-dracula",
   "name": "pi-theme-dracula",
-  "version": "0.2.0",
-  "description": "pi-theme-dracula — PI-Desktop Dracula theme plugin.",
+  "version": "0.3.0",
+  "description": "pi-theme-dracula — PI-Desktop Dracula theme.",
   "main": "main.js",
-  "ui": {
-    "panel": "renderer/index.html",
-    "title": { "en": "Dracula Theme", "zh-CN": "Dracula 主题" }
-  },
   "contributes": {
-    "commands": [
+    "themes": [
       {
-        "id": "pi-theme-dracula.open",
-        "title": "Dracula Theme: Open Panel",
-        "keywords": [
-          "pi-theme-dracula"
-        ]
+        "id": "dracula",
+        "label": "Dracula",
+        "path": "themes/dracula.css",
+        "base": "dark"
       }
-    ],
-      "themes": [
-        {
-          "id": "dracula",
-          "label": "Dracula",
-          "path": "themes/dracula.css",
-          "base": "dark"
-        }
-      ]
+    ]
   },
   "permissions": [
-    "ui.panel",
     "ui.theme"
   ],
   "engines": {
     "piDesktop": ">=0.1.0"
   },
-  "activationEvents": [
-    "onCommand:pi-theme-dracula.open",
-    "onStartup"
-  ],
   "i18n": {
     "en": {
       "name": "Dracula Theme",
-      "description": "Applies the classic Dracula palette to PI-Desktop and ships a small panel preview.",
-      "safetyNotes": "No network, file, clipboard or agent access. Contributes one theme and one panel-opening command."
+      "description": "Applies the classic Dracula palette to PI-Desktop.",
+      "safetyNotes": "No network, file, clipboard or agent access. Contributes one theme only — pure CSS, sanitized by the host."
     },
     "zh-CN": {
       "name": "Dracula 主题",
-      "description": "为 PI-Desktop 应用经典 Dracula 配色，并附带一个面板预览。",
-      "safetyNotes": "不访问网络、文件、剪贴板或 Agent。仅贡献一个主题和一个打开面板的命令。"
+      "description": "为 PI-Desktop 应用经典 Dracula 配色。",
+      "safetyNotes": "不访问网络、文件、剪贴板或 Agent。仅贡献一个主题；纯 CSS，由宿主净化。"
     }
   }
 }

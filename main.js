@@ -1,25 +1,12 @@
 /**
- * pi-theme-dracula — PI-Desktop plugin entry.
+ * pi-theme-dracula — pure theme plugin.
  *
- * The host injects the global `pi` object. Every call is gated by the
- * permissions declared in manifest.json, so widening what this file does
- * usually means widening `permissions` too.
+ * All contributions are declarative (contributes.themes in manifest.json),
+ * so the entry keeps the required lifecycle hooks as no-ops.
  */
 
-async function onLoad() {
-  await pi.commands.register({
-    id: "pi-theme-dracula.open",
-    title: "Dracula Theme: Open Panel",
-    keywords: ["pi-theme-dracula"],
-    run: async () => {
-      await pi.ui.openPanel({ title: "pi-theme-dracula" });
-      await pi.ui.showToast("Hello from pi-theme-dracula");
-    },
-  });
-}
+async function onLoad() {}
 
-async function onUnload() {
-  await pi.commands.unregister("pi-theme-dracula.open");
-}
+async function onUnload() {}
 
 module.exports = { onLoad, onUnload };
