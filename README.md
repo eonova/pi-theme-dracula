@@ -1,4 +1,4 @@
-# pi-theme-dracula — PI-Desktop 德古拉主题
+# pi-theme-dracula — PI-Desktop Dracula 主题
 
 A PI-Desktop theme/plugin based on the classic **Dracula** palette
 (`#282a36` / `#44475a` / `#f8f8f2` / purple `#bd93f9` / pink `#ff79c6` /

@@ -7,7 +7,7 @@
   "main": "main.js",
   "ui": {
     "panel": "renderer/index.html",
-    "title": { "en": "Dracula Theme", "zh-CN": "德古拉主题" }
+    "title": { "en": "Dracula Theme", "zh-CN": "Dracula 主题" }
   },
   "contributes": {
     "commands": [
@@ -46,7 +46,7 @@
       "safetyNotes": "No network, file, clipboard or agent access. Contributes one theme and one panel-opening command."
     },
     "zh-CN": {
-      "name": "德古拉主题",
+      "name": "Dracula 主题",
       "description": "为 PI-Desktop 应用经典 Dracula 配色，并附带一个面板预览。",
       "safetyNotes": "不访问网络、文件、剪贴板或 Agent。仅贡献一个主题和一个打开面板的命令。"
     }

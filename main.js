@@ -9,7 +9,7 @@
 async function onLoad() {
   await pi.commands.register({
     id: "pi-theme-dracula.open",
-    title: "pi-theme-dracula: Open Panel",
+    title: "Dracula Theme: Open Panel",
     keywords: ["pi-theme-dracula"],
     run: async () => {
       await pi.ui.openPanel({ title: "pi-theme-dracula" });
