@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "id": "local.pi-theme-dracula",
+  "id": "io.github.eonova.theme-dracula",
   "name": "pi-theme-dracula",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "pi-theme-dracula — PI-Desktop Dracula theme plugin.",
   "main": "main.js",
   "ui": {
@@ -18,10 +18,19 @@
           "pi-theme-dracula"
         ]
       }
-    ]
+    ],
+      "themes": [
+        {
+          "id": "dracula",
+          "label": "Dracula",
+          "path": "themes/dracula.css",
+          "base": "dark"
+        }
+      ]
   },
   "permissions": [
-    "ui.panel"
+    "ui.panel",
+    "ui.theme"
   ],
   "engines": {
     "piDesktop": ">=0.1.0"
