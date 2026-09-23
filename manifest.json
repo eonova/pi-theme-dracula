@@ -7,13 +7,13 @@
   "main": "main.js",
   "ui": {
     "panel": "renderer/index.html",
-    "title": "pi-theme-dracula"
+    "title": { "en": "Dracula Theme", "zh-CN": "德古拉主题" }
   },
   "contributes": {
     "commands": [
       {
         "id": "pi-theme-dracula.open",
-        "title": "pi-theme-dracula: Open Panel",
+        "title": "Dracula Theme: Open Panel",
         "keywords": [
           "pi-theme-dracula"
         ]
@@ -38,5 +38,17 @@
   "activationEvents": [
     "onCommand:pi-theme-dracula.open",
     "onStartup"
-  ]
+  ],
+  "i18n": {
+    "en": {
+      "name": "Dracula Theme",
+      "description": "Applies the classic Dracula palette to PI-Desktop and ships a small panel preview.",
+      "safetyNotes": "No network, file, clipboard or agent access. Contributes one theme and one panel-opening command."
+    },
+    "zh-CN": {
+      "name": "德古拉主题",
+      "description": "为 PI-Desktop 应用经典 Dracula 配色，并附带一个面板预览。",
+      "safetyNotes": "不访问网络、文件、剪贴板或 Agent。仅贡献一个主题和一个打开面板的命令。"
+    }
+  }
 }

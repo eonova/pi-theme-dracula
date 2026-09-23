@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="pi-plugin-chrome" content="v2" />
-    <title>Pi Plugin Eonova</title>
+    <title>Dracula Theme</title>
     <style>
       :root {
         color-scheme: dark;
@@ -91,11 +91,40 @@
   </head>
   <body>
     <div class="card">
-      <h2>Pi Plugin Eonova</h2>
-      <p>Panel served from this plugin's renderer directory.</p>
-      <button id="ping">Toast ping</button>
+      <h2 id="panel-title"></h2>
+      <p id="panel-subtitle"></p>
+      <button id="ping"></button>
     </div>
     <script>
+      const COPY = {
+        en: {
+          title: "Dracula Theme",
+          subtitle: "Panel served from this plugin's renderer directory.",
+          ping: "Toast ping",
+          toast: "Dracula Theme panel bridge"
+        },
+        "zh-CN": {
+          title: "德古拉主题",
+          subtitle: "面板由本插件的 renderer 目录提供。",
+          ping: "测试通知",
+          toast: "德古拉主题面板桥接已接通"
+        }
+      };
+      const pickCopy = (locale) =>
+        COPY[locale] ||
+        COPY[String(locale || "").toLowerCase().startsWith("zh") ? "zh-CN" : "en"] ||
+        COPY.en;
+      const setText = (id, value) => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = value;
+      };
+      const applyCopy = (appearance) => {
+        const copy = pickCopy(appearance?.locale);
+        setText("panel-title", copy.title);
+        setText("panel-subtitle", copy.subtitle);
+        setText("ping", copy.ping);
+        window.__draculaToast = copy.toast;
+      };
       const applyAppearance = (appearance) => {
         const base = appearance?.base;
         document.documentElement.dataset.base = base === "light" || base === "dark"
@@ -104,12 +133,15 @@
         if (typeof appearance?.locale === "string" && appearance.locale) {
           document.documentElement.lang = appearance.locale;
         }
+        applyCopy(appearance);
       };
       window.pluginBridge?.on("appearance:changed", applyAppearance);
       window.pluginBridge?.invoke("app.getAppearance").then(applyAppearance).catch(() => applyAppearance(null));
       document.getElementById("ping").addEventListener("click", async () => {
         if (window.pluginBridge?.invoke) {
-          await window.pluginBridge.invoke("ui.showToast", { message: "Pi Plugin Eonova panel bridge" });
+          await window.pluginBridge.invoke("ui.showToast", {
+            message: window.__draculaToast || "Dracula Theme panel bridge",
+          });
         } else {
           alert("pluginBridge is unavailable outside PI-Desktop");
         }
