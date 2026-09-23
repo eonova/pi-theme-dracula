@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "local.pi-plugin-eonova",
+  "name": "Pi Plugin Eonova",
+  "version": "0.1.0",
+  "description": "Pi Plugin Eonova — generated from the panel-basic template.",
+  "main": "main.js",
+  "ui": {
+    "panel": "renderer/index.html",
+    "title": "Pi Plugin Eonova"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "id": "pi-plugin-eonova.open",
+        "title": "Pi Plugin Eonova: Open Panel",
+        "keywords": [
+          "pi-plugin-eonova"
+        ]
+      }
+    ]
+  },
+  "permissions": [
+    "ui.panel"
+  ],
+  "engines": {
+    "piDesktop": ">=0.1.0"
+  },
+  "activationEvents": [
+    "onCommand:pi-plugin-eonova.open",
+    "onStartup"
+  ]
+}
